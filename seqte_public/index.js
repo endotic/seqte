@@ -48,10 +48,6 @@ const TrashShell = ({
 
 const App = () => {
     return (
-        <div>Hello World</div>
-    );
-    /*
-    return (
         <TrashShell
             lines={[
                 ['Hello, World!1'],
@@ -61,7 +57,7 @@ const App = () => {
             accents={[7, 8, 9, 10, 11, 12]}
             config={_config}
         />
-    );*/
+    );
 };
 
 const init = () => {
