@@ -4,6 +4,7 @@ import './term.css';
 // import cfg from './config.json';
 
 _config = {
+    name: 'trash',
     gridSize: 50 // squares tall/wide = 100x50 chars
 }
 
@@ -13,22 +14,22 @@ const DisplayChar = ({
     }) => {
     if (accent) {
         return (
-            <span className='squish-char squish-accent'>{ content }</span>
+            <span className='trash-char trash-accent'>{ content }</span>
         );
     } else {
         return (
-            <span className='squish-char'>{ content }</span>
+            <span className='trash-char'>{ content }</span>
         );
     }
 }
 
-const Shell = ({ 
+const TrashShell = ({ 
     lines,          // queue of lines to display
     accents=[],     // mask for characters to accent = zero
     config={}       // config object
  }) => {
     return (
-        <div className='squish-shell'>
+        <div className='trash-shell'>
             {
                 lines.slice(config.gridSize)
                 .map((line, i) => {                 // each line max 100 char
@@ -45,9 +46,9 @@ const Shell = ({
     );
 };
 
-const init = () => {
-    ReactDOM.render(
-        <Shell 
+const App = () => {
+    return (
+        <TrashShell
             lines={[
                 ['Hello, World!1'],
                 ['Hello, World!2'],
@@ -55,9 +56,14 @@ const init = () => {
             ]}
             accents={[7, 8, 9, 10, 11, 12]}
             config={_config}
-        />,
-        document.getElementByClassName('squish-container')
+        />
     );
+};
+
+const init = () => {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+
+    root.render(<App />);
 };
 
 window.init = init;
