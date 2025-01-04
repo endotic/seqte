@@ -60,8 +60,10 @@ const App = () => {
     );
 };
 
-const init = () => {
+export const init = () => {
     const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(<App />);
 };
+
+init();
