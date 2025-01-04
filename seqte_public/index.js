@@ -30,7 +30,7 @@ const TrashShell = ({
  }) => {
     return (
         <div className='trash-shell'>
-            {
+            {   "asdf" +
                 lines.slice(config.gridSize)
                 .map((line, i) => {                 // each line max 100 char
                     const chars = line.split('');
