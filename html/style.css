@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    --txt: whitesmoke;
+    --drk: #333;
+
+    background-color: var(--drk);
+
+    color: var(--txt);
+}
+
+body > * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    text-shadow: 20% 20% 0 default;
+}
+
+main {
+    display: default;
+}
+
+.squish-accent {
+    background-color: var(--txt);
+    color: var(--drk);
+}
