@@ -65,9 +65,7 @@ const App = () => {
 };
 
 const init = () => {
-    const root = ReactDOM.createRoot(document.getElementById('trash-root'));
+    const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(<App />);
 };
-
-window.init = init;
